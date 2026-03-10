@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>602e4e47-504b-4a44-aa2d-f9401af6f3ac</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.24" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CreditAuthorizationSystem.Transactions.Application\CreditAuthorizationSystem.Transactions.Application.csproj" />
+    <ProjectReference Include="..\CreditAuthorizationSystem.Transactions.Domain\CreditAuthorizationSystem.Transactions.Domain.csproj" />
+    <ProjectReference Include="..\CreditAuthorizationSystem.Transactions.Infrastructure\CreditAuthorizationSystem.Transactions.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
