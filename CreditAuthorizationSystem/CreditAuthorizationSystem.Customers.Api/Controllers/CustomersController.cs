@@ -38,5 +38,12 @@ namespace CreditAuthorizationSystem.Customers.Api.Controllers
 
             return Ok(customer);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetCustomers()
+        {
+            var customers = await _service.GetCustomersAsync();
+            return Ok(customers);
+        }
     }
 }

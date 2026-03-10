@@ -18,6 +18,8 @@ builder.Services.AddSingleton<ICustomerRepository, InMemoryCustomerRepository>()
 
 builder.WebHost.UseUrls("http://0.0.0.0:8080");
 
+builder.Services.AddMemoryCache();
+
 builder.Services.AddHostedService(sp =>
 {
     var repository = sp.GetRequiredService<ICustomerRepository>();

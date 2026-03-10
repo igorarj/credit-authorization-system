@@ -1,6 +1,8 @@
 ﻿using CreditAuthorizationSystem.Customers.Application.Services;
 using CreditAuthorizationSystem.Customers.Domain.Models;
 using CreditAuthorizationSystem.Customers.Domain.Repositories;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
 using Moq;
 
 namespace CreditAuthorizationSystem.Customers.Tests
@@ -9,11 +11,13 @@ namespace CreditAuthorizationSystem.Customers.Tests
     {
         private readonly Mock<ICustomerRepository> _repositoryMock;
         private readonly CustomerService _service;
+        private readonly IMemoryCache _cache;
 
         public CustomerServiceTests()
         {
             _repositoryMock = new Mock<ICustomerRepository>();
-            _service = new CustomerService(_repositoryMock.Object);
+            _cache = new MemoryCache(new MemoryCacheOptions());
+            _service = new CustomerService(_repositoryMock.Object, _cache);
         }
 
         [Fact]
@@ -119,6 +123,35 @@ namespace CreditAuthorizationSystem.Customers.Tests
             await _service.DebitLimiteAsync(id, 200);
 
             _repositoryMock.Verify(r => r.UpdateAsync(It.IsAny<Customer>()), Times.Never);
+        }
+
+        [Fact]
+        public async Task GetCustomersAsync_ShouldReturnTwoCustomers_WhenTwoCustomersAreCreated()
+        {
+            var customer1 = new Customer
+            {
+                Id = Guid.NewGuid(),
+                Document = "123",
+                Name = "Cliente 1",
+                CreditLimit = 1000
+            };
+
+            var customer2 = new Customer
+            {
+                Id = Guid.NewGuid(),
+                Document = "456",
+                Name = "Cliente 2",
+                CreditLimit = 2000
+            };
+
+            _repositoryMock
+                .Setup(r => r.GetAllAsync())
+                .ReturnsAsync(new List<Customer> { customer1, customer2 });
+
+            var result = await _service.GetCustomersAsync();
+
+            Assert.NotNull(result);
+            Assert.Equal(2, result.Count());
         }
     }
 }

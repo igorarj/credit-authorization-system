@@ -8,5 +8,6 @@ namespace CreditAuthorizationSystem.Customers.Domain.Repositories
         Task<Customer> GetByIdAsync(Guid customerId);
         Task<Customer> AddAsync(Customer customer);
         Task<Customer> UpdateAsync(Customer customer);
+        Task<IEnumerable<Customer>> GetAllAsync();
     }
 }

@@ -28,6 +28,11 @@ namespace CreditAuthorizationSystem.Customers.Infrastructure.Repositories
             return result;
         }
 
+        public async Task<IEnumerable<Customer>> GetAllAsync()
+        {
+            return Customers.ToList();
+        }
+
         public async Task<Customer> UpdateAsync(Customer customer)
         {
             var existing = Customers.FirstOrDefault(c => c.Id == customer.Id);
