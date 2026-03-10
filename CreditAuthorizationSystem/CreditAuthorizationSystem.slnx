@@ -22,6 +22,7 @@
     <Project Path="CreditAuthorizationSystem.Transactions.Infrastructure/CreditAuthorizationSystem.Transactions.Infrastructure.csproj" />
   </Folder>
   <Folder Name="/test/">
+    <Project Path="CreditAuthorizationSystem.Customers.Tests/CreditAuthorizationSystem.Customers.Tests.csproj" Id="2e3d9e74-9a61-4337-a596-b6a407d94592" />
     <Project Path="CreditAuthorizationSystem.Transactions.Tests/CreditAuthorizationSystem.Transactions.Tests.csproj" Id="d0b48530-bdb1-4f09-af23-ea95a5d8cf18" />
   </Folder>
 </Solution>

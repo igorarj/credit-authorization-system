@@ -30,3 +30,5 @@
 /CreditAuthorizationSystem/CreditAuthorizationSystem.Transactions.Infrastructure/obj
 /CreditAuthorizationSystem/CreditAuthorizationSystem.Transactions.Tests/bin/Debug/net8.0
 /CreditAuthorizationSystem/CreditAuthorizationSystem.Transactions.Tests/obj
+/CreditAuthorizationSystem/CreditAuthorizationSystem.Customers.Tests/bin/Debug/net8.0
+/CreditAuthorizationSystem/CreditAuthorizationSystem.Customers.Tests/obj
