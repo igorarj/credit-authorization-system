@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.IdentityModel" Version="7.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.16.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CreditAuthorizationSystem.Auth.Application\CreditAuthorizationSystem.Auth.Application.csproj" />
+    <ProjectReference Include="..\CreditAuthorizationSystem.Auth.Domain\CreditAuthorizationSystem.Auth.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
