@@ -153,6 +153,17 @@ Frameworks utilizados:
 
 ---
 
+## Como Executar o Projeto
+
+Toda a aplicação está totalmente containerizada e pode ser executada utilizando **Docker Compose**.
+
+Basta executar o seguinte comando na raiz do projeto:
+
+```bash
+docker compose up --build
+```
+---
+
 ## Observações
 
 Devido ao tempo limitado da avaliação técnica, foram implementados apenas alguns **testes unitários focados nas principais regras de negócio**.
