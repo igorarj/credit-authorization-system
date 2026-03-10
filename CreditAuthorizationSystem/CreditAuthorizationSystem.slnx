@@ -1,0 +1,27 @@
+<Solution>
+  <Folder Name="/solution-items/">
+    <File Path="docker-compose.yml" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/auth/">
+    <Project Path="CreditAuthorizationSystem.Auth.Api/CreditAuthorizationSystem.Auth.Api.csproj" />
+    <Project Path="CreditAuthorizationSystem.Auth.Application/CreditAuthorizationSystem.Auth.Application.csproj" />
+    <Project Path="CreditAuthorizationSystem.Auth.Domain/CreditAuthorizationSystem.Auth.Domain.csproj" />
+    <Project Path="CreditAuthorizationSystem.Auth.Infrastructure/CreditAuthorizationSystem.Auth.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/customers/">
+    <Project Path="CreditAuthorizationSystem.Customers.Api/CreditAuthorizationSystem.Customers.Api.csproj" />
+    <Project Path="CreditAuthorizationSystem.Customers.Application/CreditAuthorizationSystem.Customers.Application.csproj" />
+    <Project Path="CreditAuthorizationSystem.Customers.Domain/CreditAuthorizationSystem.Customers.Domain.csproj" />
+    <Project Path="CreditAuthorizationSystem.Customers.Infrastructure/CreditAuthorizationSystem.Customers.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/transactions/">
+    <Project Path="CreditAuthorizationSystem.Transactions.Api/CreditAuthorizationSystem.Transactions.Api.csproj" />
+    <Project Path="CreditAuthorizationSystem.Transactions.Application/CreditAuthorizationSystem.Transactions.Application.csproj" />
+    <Project Path="CreditAuthorizationSystem.Transactions.Domain/CreditAuthorizationSystem.Transactions.Domain.csproj" />
+    <Project Path="CreditAuthorizationSystem.Transactions.Infrastructure/CreditAuthorizationSystem.Transactions.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="CreditAuthorizationSystem.Transactions.Tests/CreditAuthorizationSystem.Transactions.Tests.csproj" Id="d0b48530-bdb1-4f09-af23-ea95a5d8cf18" />
+  </Folder>
+</Solution>

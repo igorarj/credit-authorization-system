@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "CreditAuthorizationSystem.Auth.Api\\CreditAuthorizationSystem.Auth.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "CreditAuthorizationSystem.Transactions.Api\\CreditAuthorizationSystem.Transactions.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "CreditAuthorizationSystem.Customers.Api\\CreditAuthorizationSystem.Customers.Api.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
